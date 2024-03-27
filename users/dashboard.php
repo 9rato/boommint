@@ -9,9 +9,9 @@ include('../db/config.php');
 
 // Establish database connection
 $servername = "localhost"; // Change this if your database is hosted elsewhere
-$username = "root"; // Change this to your database username
-$password = ""; // Change this to your database password
-$database = "pinetwork"; // Change this to your database name
+$username = "boommint_pi"; // Change this to your database username
+$password = "boommint_pi"; // Change this to your database password
+$database = "boommint_pi"; // Change this to your database name
 
 $connection = new mysqli($servername, $username, $password, $database);
 

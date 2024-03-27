@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$database = "pinetwork";
+$username = "boommint_pi";
+$password = "boommint_pi";
+$database = "boommint_pi";
 
 // Declare $conn as a global variable
 global $conn;

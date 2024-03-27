@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </style>
 <!--slideer-->
-<div class="flex bg-[#030828]">
+<div class="flex bg-red-500">
     <div class="flex-1 ml-8">
         <!-- Content for the first column -->
         <h1 class="text-left font-semibold text-[100px] text-white text-custom1">Sell PI COIN</h1>
