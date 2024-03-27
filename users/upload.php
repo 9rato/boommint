@@ -85,9 +85,9 @@ include('../db/config.php');
 
         // Database connection parameters
         $servername = "localhost";
-        $username = "root"; // Replace with your MySQL username
-        $password = ""; // Replace with your MySQL password
-        $dbname = "pinetwork"; // Replace with your MySQL database name
+        $username = "boommint_pi"; // Replace with your MySQL username
+        $password = "boommint_pi"; // Replace with your MySQL password
+        $dbname = "boommint_pi"; // Replace with your MySQL database name
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
