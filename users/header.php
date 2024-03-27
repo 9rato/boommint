@@ -9,15 +9,8 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>User Dashboard</title>
 </head>
-<style>
-    /* Additional custom styles */
-    .fixed-header {
-      transition: background-color 0.3s ease;
-    }
-  </style>
 <body class="">
-<!-- Header -->
-<header id="header" class="fixed top-0 left-0 w-full bg-indigo-900 text-white p-4 z-10">
+<header class="bg-indigo-900 text-white p-4">
     <div class="container mx-auto flex items-center justify-between">
       <!-- Logo -->
       <div class="text-2xl font-bold">
@@ -45,6 +38,8 @@
         <button class="text-white hover:text-gray-400 rounded-lg bg-[#ffce29] w-[50px] h-[25px] border-color: transparent;">
         <a href="pages/login.php" class="text-white hover:text-gray-400 no-underline">logout</a>
         </button>
+
+
       </div>
     </div>
   </header>
@@ -60,16 +55,8 @@
 
   <!-- Your content goes here -->
 
-  <script>a
-    window.addEventListener('scroll', function() {
-      var header = document.getElementById('header');
-      if (window.scrollY > 0) {
-        header.classList.add('bg-blue-500');
-      } else {
-        header.classList.remove('bg-blue-500');
-      }
-    });
-    
+  <!-- Include the JavaScript script -->
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
       // Toggle mobile menu visibility
       document.getElementById('mobile-menu-button').addEventListener('click', function () {

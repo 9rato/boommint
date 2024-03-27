@@ -1,6 +1,6 @@
 
 
-<footer class="bg-violet-950 rounded-lg shadow m-4 dark:bg-gray-800">
+<footer class="bg-[#030828] rounded-lg shadow m-4 dark:bg-gray-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <span class="text-sm text-white sm:text-center dark:text-white">© 2024 <a href="https://boommint.com/" class="hover:underline text-white">Boommint™</a>. All Rights Reserved.
     </span>
