@@ -73,9 +73,9 @@
     window.addEventListener('scroll', function() {
       var header = document.getElementById('header');
       if (window.scrollY > 0) {
-        header.classList.add('bg-blue-500');
+        header.classList.add('bg-[#030828]');
       } else {
-        header.classList.remove('bg-blue-500');
+        header.classList.remove('bg-[#030828]');
       }
     });
     

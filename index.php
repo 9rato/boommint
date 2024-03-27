@@ -167,7 +167,7 @@ include('template/header-one.php');
     <label for="price" class="block text-gray-700 text-sm font-bold mb-2 text-center">PRICE</label>
     <label for="price" id="totalAmount" class="block text-sm font-bold mb-2 text-center text-violet-950" style="font-size: xxx-large;">N0.00</label>
   </div>
-  <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="calculateTotal()">Calculate</button>
+  <!--<button type="button" class="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="calculateTotal()">Calculate</button>-->
 </div>
 </div>
 
