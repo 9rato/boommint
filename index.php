@@ -3,16 +3,16 @@
 include('template/header-one.php');
 
 // Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve the input value from the form
-    $amount = isset($_POST["amount"]) ? floatval($_POST["amount"]) : 0;
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Retrieve the input value from the form
+//     $amount = isset($_POST["amount"]) ? floatval($_POST["amount"]) : 0;
 
-    // Assuming the price per coin is fixed at N50,000
-    $pricePerCoin = 500;
+//     // Assuming the price per coin is fixed at N50,000
+//     $pricePerCoin = 500;
 
-    // Calculate the total amount
-    $totalAmount = $amount * $pricePerCoin;
-}
+//     // Calculate the total amount
+//     $totalAmount = $amount * $pricePerCoin;
+// }
 
 ?>
 
@@ -89,6 +89,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 </style>
+
+<script>
+  // Function to calculate total amount
+  function calculateTotal() {
+    // Retrieve the amount input value
+    var amountInput = document.getElementById('amount').value;
+    
+    // Assuming the price per coin is fixed at N50,000
+    var pricePerCoin = 500;
+
+    // Calculate the total amount
+    var totalAmount = parseFloat(amountInput) * pricePerCoin;
+
+    // Display the total amount
+    var totalElement = document.getElementById('totalAmount');
+    totalElement.textContent = 'N' + totalAmount.toFixed(2); // Format total amount
+  }
+</script>
 <!--slideer-->
 <div class="flex bg-[#030828]">
     <div class="flex-1 ml-8">
@@ -137,29 +155,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-    <div class="md:mr-8 ">
-        
-         <!-- Inline image -->
-         <img class="w-14 h-14 rounded-full mx-auto mb-4" src="assets/image/items-one/16193.png" alt="Profile Image">
+   <div class="md:mr-8 ">
+  <!-- Inline image -->
+  <img class="w-14 h-14 rounded-full mx-auto mb-4" src="assets/image/items-one/16193.png" alt="Profile Image">
 
-        <!-- Form -->
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <div class="mb-4">
-                <label for="amount" class="block text-gray-700 text-sm font-bold mb-2">AMOUNTS</label>
-                <input type="text" id="amount" name="amount" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline">
-                
-                <label for="price" class="block text-gray-700 text-sm font-bold mb-2 text-center">PRICE</label>
-                <?php
-    // Display the total amount if it has been calculated
-    if (isset($totalAmount)) {
-        echo ' <label for="price" class="block text-sm font-bold mb-2 text-center text-violet-950" style="font-size: xxx-large;"> N' . number_format($totalAmount, 2) .'</label>';
-        }
-        ?>
-        </div>
-            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline">Calculate</button>
-        </form>
-
-    </div>
+  <!-- Form -->
+  <div class="mb-4">
+    <label for="amount" class="block text-gray-700 text-sm font-bold mb-2">AMOUNTS</label>
+    <input type="text" id="amount" name="amount" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline" oninput="calculateTotal()">
+    
+    <label for="price" class="block text-gray-700 text-sm font-bold mb-2 text-center">PRICE</label>
+    <label for="price" id="totalAmount" class="block text-sm font-bold mb-2 text-center text-violet-950" style="font-size: xxx-large;">N0.00</label>
+  </div>
+  <button type="button" class="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="calculateTotal()">Calculate</button>
+</div>
 </div>
 
 
