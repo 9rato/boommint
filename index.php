@@ -279,42 +279,40 @@ include('template/header-one.php');
       <button class="text-red-500 underline like-btn">Like</button>
     </div>
   </div>
-  <div class="flex flex-wrap justify-center" id="testimony-container">
-  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
-    <div class="px-4 py-2">
-      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- John Doe</p>
-    </div>
-    <div class="px-4 py-2 hidden" id="additional-info">
-      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="flex justify-between px-4 py-2">
-      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">Like</button>
-    </div>
-  </div>
-  <div class="flex flex-wrap justify-center" id="testimony-container">
-  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
-    <div class="px-4 py-2">
-      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- John Doe</p>
-    </div>
-    <div class="px-4 py-2 hidden" id="additional-info">
-      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="flex justify-between px-4 py-2">
-      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">Like</button>
-    </div>
-  </div>
-  <!-- Repeat the same structure for other cards -->
 
+  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
+    <img src="https://via.placeholder.com/150" alt="Jane Doe" class="w-full h-auto">
+    <div class="px-4 py-2">
+      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="px-4 py-2">
+      <p class="text-gray-600 text-sm italic">- Jane Doe</p>
+    </div>
+    <div class="px-4 py-2 hidden" id="additional-info">
+      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="flex justify-between px-4 py-2">
+      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
+      <button class="text-red-500 underline like-btn">Like</button>
+    </div>
+  </div>
+
+  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
+    <img src="https://via.placeholder.com/150" alt="Alice Doe" class="w-full h-auto">
+    <div class="px-4 py-2">
+      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="px-4 py-2">
+      <p class="text-gray-600 text-sm italic">- Alice Doe</p>
+    </div>
+    <div class="px-4 py-2 hidden" id="additional-info">
+      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="flex justify-between px-4 py-2">
+      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
+      <button class="text-red-500 underline like-btn">Like</button>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -344,7 +342,6 @@ include('template/header-one.php');
     });
   });
 </script>
-
 <!--end of testimony card-->
 <?php
 include('template/footer.php');
