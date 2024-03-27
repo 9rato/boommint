@@ -227,7 +227,7 @@ include('template/header-one.php');
 <!--end section three-->
 <!-------------------------------------------------------->
 <!--section four-->
-<div class="section4 mt-4 mr-16 ml-16 mb-12">
+<div class="section4 mt-[60px] mr-16 ml-16 mb-12">
     <div class="grid gap-4 text-center mb-8">
         <p class="text-violet-950 font-bold relative">
         What We Do
@@ -260,6 +260,59 @@ include('template/header-one.php');
 
 <!--end of section four-->
 <!-------------------------------------------------------->
+<!-------------------------------------------------------->
+<!--testimony card-->
+<div class="flex flex-wrap justify-center" id="testimony-container">
+  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
+    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
+    <div class="px-4 py-2">
+      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="px-4 py-2">
+      <p class="text-gray-600 text-sm italic">- John Doe</p>
+    </div>
+    <div class="px-4 py-2 hidden" id="additional-info">
+      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="flex justify-between px-4 py-2">
+      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
+      <button class="text-red-500 underline like-btn">Like</button>
+    </div>
+  </div>
+
+  <!-- Repeat the same structure for other cards -->
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const toggleButtons = document.querySelectorAll(".toggle-info");
+    const likeButtons = document.querySelectorAll(".like-btn");
+
+    toggleButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        const additionalInfo = this.parentNode.parentNode.querySelector("#additional-info");
+        additionalInfo.classList.toggle("hidden");
+        if (additionalInfo.classList.contains("hidden")) {
+          this.textContent = "Show Additional Info";
+        } else {
+          this.textContent = "Hide Additional Info";
+        }
+      });
+    });
+
+    let likeCounts = [0, 0, 0]; // Initialize like counts for each card
+
+    likeButtons.forEach(function(button, index) {
+      button.addEventListener("click", function() {
+        likeCounts[index]++;
+        this.textContent = `Liked (${likeCounts[index]})`;
+      });
+    });
+  });
+</script>
+
+<!--end of testimony card-->
 <?php
 include('template/footer.php');
 ?>
