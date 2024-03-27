@@ -108,7 +108,7 @@ include('template/header-one.php');
   }
 </script>
 <!--slideer-->
-<div class="flex bg-[#030828] mt-[63px]">
+<div class="flex bg-[#030828] mt-[63px] mb-8">
     <div class="flex-1 ml-8">
         <!-- Content for the first column -->
         <h1 class="text-left font-semibold text-[100px] text-white text-custom1">Sell PI COIN</h1>
@@ -177,7 +177,7 @@ include('template/header-one.php');
 <!------------------------------------------------------->
 <!-------------------------------------------------------->
 
-<div class="grid gap-4 text-center mb-8 mt-8">
+<div class="grid gap-4 text-center mb-8 mt-[40px]">
         <p class="text-violet-950 font-bold relative">
         What We Do
         <span class="block mx-auto mt-1 w-16 h-1 bg-yellow-500"></span>
