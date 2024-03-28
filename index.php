@@ -263,6 +263,7 @@ include('template/header-one.php');
 <!-------------------------------------------------------->
 <!--testimony card-->
 <div class="flex flex-wrap justify-center" id="testimony-container">
+  <!-- First Testimony Card -->
   <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
     <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
     <div class="px-4 py-2">
@@ -276,43 +277,64 @@ include('template/header-one.php');
     </div>
     <div class="flex justify-between px-4 py-2">
       <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">Like</button>
+      <button class="text-red-500 underline like-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-1.414 1.414a2 2 0 01-2.828-2.828l1.415-1.415a2 2 0 012.828 2.829zM12 17l1.414 1.414a2 2 0 002.828-2.828L14.83 14.17a2 2 0 00-2.829 2.828z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 5l-7 7 7 7 7-7-7-7z" />
+        </svg>
+        <span class="like-count">0</span>
+      </button>
     </div>
   </div>
 
+  <!-- First Testimony Card -->
   <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="Jane Doe" class="w-full h-auto">
+    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
     <div class="px-4 py-2">
       <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- Jane Doe</p>
+      <p class="text-gray-600 text-sm italic">- John Doe</p>
     </div>
     <div class="px-4 py-2 hidden" id="additional-info">
       <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
     <div class="flex justify-between px-4 py-2">
       <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">Like</button>
+      <button class="text-red-500 underline like-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-1.414 1.414a2 2 0 01-2.828-2.828l1.415-1.415a2 2 0 012.828 2.829zM12 17l1.414 1.414a2 2 0 002.828-2.828L14.83 14.17a2 2 0 00-2.829 2.828z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 5l-7 7 7 7 7-7-7-7z" />
+        </svg>
+        <span class="like-count">0</span>
+      </button>
     </div>
   </div>
 
+  <!-- First Testimony Card -->
   <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="Alice Doe" class="w-full h-auto">
+    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
     <div class="px-4 py-2">
       <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- Alice Doe</p>
+      <p class="text-gray-600 text-sm italic">- John Doe</p>
     </div>
     <div class="px-4 py-2 hidden" id="additional-info">
       <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
     <div class="flex justify-between px-4 py-2">
       <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">Like</button>
+      <button class="text-red-500 underline like-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-1.414 1.414a2 2 0 01-2.828-2.828l1.415-1.415a2 2 0 012.828 2.829zM12 17l1.414 1.414a2 2 0 002.828-2.828L14.83 14.17a2 2 0 00-2.829 2.828z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 5l-7 7 7 7 7-7-7-7z" />
+        </svg>
+        <span class="like-count">0</span>
+      </button>
     </div>
   </div>
+
 </div>
 
 <script>
