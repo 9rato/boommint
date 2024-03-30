@@ -48,9 +48,10 @@
       <!-- Register and Login (hidden by default on small screens) -->
       <div class="hidden lg:flex space-x-4">
         <a href="../pages/register.php" class="text-white hover:text-gray-400">Register</a>
-        <button class="text-white hover:text-gray-400 rounded-lg bg-[#ffce29] w-[50px] h-[25px] border-color: transparent;">
+        <button class="text-white hover:text-gray-400 rounded-lg bg-[#ffce29] font-bold py-2 px-4 border-color: transparent;">
         <a href="login.php" class="text-white hover:text-gray-400 no-underline">Login</a>
         </button>
+      
       </div>
     </div>
   </header>

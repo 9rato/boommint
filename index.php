@@ -108,7 +108,7 @@ include('template/header-one.php');
   }
 </script>
 <!--slideer-->
-<div class="flex bg-[#030828] mt-[63px] mb-8">
+<div class="flex bg-[#030828] mt-[63px]">
     <div class="flex-1 ml-8">
         <!-- Content for the first column -->
         <h1 class="text-left font-semibold text-[100px] text-white text-custom1">Sell PI COIN</h1>
@@ -129,7 +129,95 @@ include('template/header-one.php');
 
 <!--end of slider-->
 <!--transaction proof-->
+<style>
+    /* Custom styles */
+    .transaction-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 3px 0;
+      animation: slideIn 1s ease-in-out;
+    }
 
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .transaction-item.fade-out {
+      animation: slideOut 1s ease-in-out;
+    }
+
+    @keyframes slideOut {
+      0% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+  </style>
+<div class="container-xl bg-[#ffce29] shadow-lg p-2">
+    <h1 class="text-2xl font-bold mb-2 pl-8">Transactions</h1>
+    <marquee>
+    <div id="transactionList" class="text-2xl font-bold mb-2 pl-8 text-white"></div>
+    </marquee>
+  </div>
+
+  <script>
+    let transactions = [];
+    let currentTransactionIndex = 0;
+
+    // Function to generate a random phone number
+    function generatePhoneNumber() {
+      return Math.floor(Math.random() * 10000000000).toString().padStart(10, '0');
+    }
+
+    // Function to generate a random amount
+    function generateAmount() {
+      return (Math.random() * 1000).toFixed(2);
+    }
+
+    // Function to generate a single transaction
+    function generateSingleTransaction() {
+      const phoneNumber = generatePhoneNumber();
+      const amount = generateAmount();
+      return `
+        <div class="transaction-item">
+          <p class="pl-8"><strong>Phone Number:</strong> ${phoneNumber} <strong>Amount:</strong> $${amount} <strong>Type:</strong> ${Math.random() > 0.5 ? 'Buy' : 'Sell'} <strong>Date:</strong> ${new Date().toLocaleString()}</p>
+        </div>
+      `;
+    }
+
+    // Function to generate transactions
+    function generateTransactions() {
+      transactions = [];
+      for (let i = 0; i < 1; i++) {
+        transactions.push(generateSingleTransaction());
+      }
+      const transactionList = document.getElementById('transactionList');
+      transactionList.classList.add('fade-out'); // Add fade-out animation class
+      setTimeout(function() {
+        transactionList.classList.remove('fade-out'); // Remove fade-out animation class after animation completes
+        transactionList.innerHTML = transactions.join('');
+      }, 1000); // Wait for animation duration before updating content
+    }
+
+    // Generate initial transactions
+    generateTransactions();
+
+    // Increment index and generate transactions every minute
+    setInterval(function() {
+      currentTransactionIndex++;
+      generateTransactions();
+    }, 60000);
+  </script>
 <!--end of transaction proof-->
 <!------------------------------------------------------->
   
