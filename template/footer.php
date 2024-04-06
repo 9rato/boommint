@@ -1,4 +1,15 @@
 
+<style>
+.pichat{
+    bottom: 0px;
+    right: 0px;
+    position: fixe;
+    z-index: 1000;
+    border: 0px;
+}
+</style>
+
+
 
 <footer class="bg-[#030828] rounded-lg shadow m-4 dark:bg-gray-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">

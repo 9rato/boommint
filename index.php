@@ -1,6 +1,6 @@
 
 <?php
-include('template/header-one.php');
+include('template/header.php');
 
 // Check if the form is submitted
 // if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -129,66 +129,61 @@ include('template/header-one.php');
 
 <!--end of slider-->
 <!--transaction proof-->
+<div class="container-xl bg-[#ffce29] shadow-lg p-2">
+    <h1 class="text-2xl font-bold mb-2 pl-8 text-[#030828]">Transactions</h1>
+    <div class="marquee">
+        <div id="transactionList" class="text-2xl font-bold mb-2 pl-8 text-white"></div>
+    </div>
+</div>
+
 <style>
     /* Custom styles */
     .transaction-item {
-      border-bottom: 1px solid #e5e7eb;
-      padding: 3px 0;
-      animation: slideIn 1s ease-in-out;
+        padding: 3px 0;
     }
 
-    @keyframes slideIn {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
+    .marquee {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
-    .transaction-item.fade-out {
-      animation: slideOut 1s ease-in-out;
+    .marquee div {
+        display: inline-block;
+        animation: marquee 1000s linear infinite; /* Increased duration to slow down */
     }
 
-    @keyframes slideOut {
-      0% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(100%);
-        opacity: 0;
-      }
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
-  </style>
-<div class="container-xl bg-[#ffce29] shadow-lg p-2">
-    <h1 class="text-2xl font-bold mb-2 pl-8">Transactions</h1>
-    <marquee>
-    <div id="transactionList" class="text-2xl font-bold mb-2 pl-8 text-white"></div>
-    </marquee>
-  </div>
+    
+    
+</style>
 
-  <script>
+<script>
     let transactions = [];
     let currentTransactionIndex = 0;
 
     // Function to generate a random phone number
     function generatePhoneNumber() {
-      return Math.floor(Math.random() * 10000000000).toString().padStart(10, '0');
+        return Math.floor(Math.random() * 10000000000).toString().padStart(10, '0');
     }
 
     // Function to generate a random amount
     function generateAmount() {
-      return (Math.random() * 1000).toFixed(2);
+        return (Math.random() * 1000).toFixed(2);
     }
 
     // Function to generate a single transaction
     function generateSingleTransaction() {
-      const phoneNumber = generatePhoneNumber();
-      const amount = generateAmount();
-      return `
+        const phoneNumber = generatePhoneNumber();
+        const amount = generateAmount();
+        return `
         <div class="transaction-item">
           <p class="pl-8"><strong>Phone Number:</strong> ${phoneNumber} <strong>Amount:</strong> $${amount} <strong>Type:</strong> ${Math.random() > 0.5 ? 'Buy' : 'Sell'} <strong>Date:</strong> ${new Date().toLocaleString()}</p>
         </div>
@@ -197,16 +192,12 @@ include('template/header-one.php');
 
     // Function to generate transactions
     function generateTransactions() {
-      transactions = [];
-      for (let i = 0; i < 1; i++) {
-        transactions.push(generateSingleTransaction());
-      }
-      const transactionList = document.getElementById('transactionList');
-      transactionList.classList.add('fade-out'); // Add fade-out animation class
-      setTimeout(function() {
-        transactionList.classList.remove('fade-out'); // Remove fade-out animation class after animation completes
+        transactions = [];
+        for (let i = 0; i < 100; i++) {
+            transactions.push(generateSingleTransaction());
+        }
+        const transactionList = document.getElementById('transactionList');
         transactionList.innerHTML = transactions.join('');
-      }, 1000); // Wait for animation duration before updating content
     }
 
     // Generate initial transactions
@@ -214,11 +205,12 @@ include('template/header-one.php');
 
     // Increment index and generate transactions every minute
     setInterval(function() {
-      currentTransactionIndex++;
-      generateTransactions();
+        currentTransactionIndex++;
+        generateTransactions();
     }, 60000);
-  </script>
+</script>
 <!--end of transaction proof-->
+
 <!------------------------------------------------------->
   
 <div class="flex flex-col-reverse md:flex-row md:grid md:grid-cols-2 gap-4 mx-2 sm:mx-4 md:mx-8 max-w-screen-xl mt-4 md:mt-8">
@@ -348,133 +340,65 @@ include('template/header-one.php');
 <!--end of section four-->
 <!-------------------------------------------------------->
 <!-------------------------------------------------------->
-<!--testimony card-->
-<div class="flex flex-wrap justify-center" id="testimony-container mr-8 ml-8">
-  <!-- First Testimony Card -->
-  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
-    <div class="px-4 py-2">
-      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<!-- Testimony card container -->
+<div class="overflow-x-auto">
+  <div class="md:flex justify-start mx-8 block" id="testimony-container">
+    <!-- First Testimony Card -->
+    <div class="max-w-xs mx-2 my-4 bg-yellow-300 shadow-lg rounded-lg overflow-hidden testimony-card">
+      <div class="px-4 py-2">
+        <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="px-4 py-2">
+        <p class="text-gray-600 text-sm italic">- John Doe</p>
+      </div>
     </div>
-    <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- John Doe</p>
-    </div>
-    <div class="px-4 py-2 hidden" id="additional-info">
-      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="flex justify-between px-4 py-2">
-      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-1.414 1.414a2 2 0 01-2.828-2.828l1.415-1.415a2 2 0 012.828 2.829zM12 17l1.414 1.414a2 2 0 002.828-2.828L14.83 14.17a2 2 0 00-2.829 2.828z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 5l-7 7 7 7 7-7-7-7z" />
-        </svg>
-        <span class="like-count">0</span>
-      </button>
-    </div>
-  </div>
-  <!-- First Testimony Card -->
-  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
-    <div class="px-4 py-2">
-      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- John Doe</p>
-    </div>
-    <div class="px-4 py-2 hidden" id="additional-info">
-      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="flex justify-between px-4 py-2">
-      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-1.414 1.414a2 2 0 01-2.828-2.828l1.415-1.415a2 2 0 012.828 2.829zM12 17l1.414 1.414a2 2 0 002.828-2.828L14.83 14.17a2 2 0 00-2.829 2.828z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 5l-7 7 7 7 7-7-7-7z" />
-        </svg>
-        <span class="like-count">0</span>
-      </button>
-    </div>
-  </div>
 
-  <!-- First Testimony Card -->
-  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
-    <div class="px-4 py-2">
-      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <!-- Second Testimony Card -->
+    <div class="max-w-xs mx-2 my-4 bg-yellow-300 shadow-lg rounded-lg overflow-hidden testimony-card">
+      <div class="px-4 py-2">
+        <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="px-4 py-2">
+        <p class="text-gray-600 text-sm italic">- John Doe</p>
+      </div>
     </div>
-    <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- John Doe</p>
+
+    <!-- Third Testimony Card -->
+    <div class="max-w-xs mx-2 my-4 bg-yellow-300 shadow-lg rounded-lg overflow-hidden testimony-card">
+      <div class="px-4 py-2">
+        <p class="text-gray-800 text-base">Boommint made trading Pi Coin a breeze! Their platform is user-friendly, and I was able to buy and sell Pi Coin effortlessly. I highly recommend Boommint to anyone interested in Pi Coin trading.</p>
+      </div>
+      <div class="px-4 py-2">
+        <p class="text-gray-600 text-sm italic">- Sophia Rodriguez</p>
+      </div>
     </div>
-    <div class="px-4 py-2 hidden" id="additional-info">
-      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="flex justify-between px-4 py-2">
-      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-1.414 1.414a2 2 0 01-2.828-2.828l1.415-1.415a2 2 0 012.828 2.829zM12 17l1.414 1.414a2 2 0 002.828-2.828L14.83 14.17a2 2 0 00-2.829 2.828z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 5l-7 7 7 7 7-7-7-7z" />
-        </svg>
-        <span class="like-count">0</span>
-      </button>
+
+    <!-- Fourth Testimony Card -->
+    <div class="max-w-xs mx-2 my-4 bg-yellow-300 shadow-lg rounded-lg overflow-hidden testimony-card">
+      <div class="px-4 py-2">
+        <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+      <div class="px-4 py-2">
+        <p class="text-gray-600 text-sm italic">- John Doe</p>
+      </div>
     </div>
   </div>
-
-  <!-- First Testimony Card -->
-  <div class="max-w-xs mx-2 my-4 bg-white shadow-lg rounded-lg overflow-hidden testimony-card">
-    <img src="https://via.placeholder.com/150" alt="John Doe" class="w-full h-auto">
-    <div class="px-4 py-2">
-      <p class="text-gray-800 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="px-4 py-2">
-      <p class="text-gray-600 text-sm italic">- John Doe</p>
-    </div>
-    <div class="px-4 py-2 hidden" id="additional-info">
-      <p class="text-gray-800 text-sm">Additional Information Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="flex justify-between px-4 py-2">
-      <button class="text-blue-500 underline toggle-info">Show Additional Info</button>
-      <button class="text-red-500 underline like-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 17l-1.414 1.414a2 2 0 01-2.828-2.828l1.415-1.415a2 2 0 012.828 2.829zM12 17l1.414 1.414a2 2 0 002.828-2.828L14.83 14.17a2 2 0 00-2.829 2.828z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 5l-7 7 7 7 7-7-7-7z" />
-        </svg>
-        <span class="like-count">0</span>
-      </button>
-    </div>
-  </div>
-
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const toggleButtons = document.querySelectorAll(".toggle-info");
-    const likeButtons = document.querySelectorAll(".like-btn");
-
-    toggleButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-        const additionalInfo = this.parentNode.parentNode.querySelector("#additional-info");
-        additionalInfo.classList.toggle("hidden");
-        if (additionalInfo.classList.contains("hidden")) {
-          this.textContent = "Show Additional Info";
-        } else {
-          this.textContent = "Hide Additional Info";
-        }
-      });
-    });
-
-    let likeCounts = [0, 0, 0]; // Initialize like counts for each card
-
-    likeButtons.forEach(function(button, index) {
-      button.addEventListener("click", function() {
-        likeCounts[index]++;
-        this.textContent = `Liked (${likeCounts[index]})`;
-      });
-    });
-  });
-</script>
 <!--end of testimony card-->
+
+<!---button-->
+<a href="./pages/pikyc.php" class="pichat-link">
+  <div class="w-16 h-16 float-right fixed bottom-10 animate-bounce bg-yellow-500 rounded-[20px] mr-8 pichat">
+    <!-- Chat icon -->
+    <img src="assets/image/items-one/16193.png" alt="" srcset="">
+    <!-- Indicator for "is-loaded" state -->
+    <div class="absolute inset-0 flex items-center justify-center" x-show="isLoaded" x-transition:enter="transition-all ease-in-out duration-500" x-transition:enter-start="opacity-0 scale-75" x-transition:enter-end="opacity-100 scale-100">
+      <div class="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+    </div>
+    <span class="bottom-0 right-0 mb-2 mr-2 text-yellow-500 font-bold shadow-lg">Verify KYC</span>
+  </div>
+</a>
 <?php
 include('template/footer.php');
 ?>

@@ -37,19 +37,19 @@
 
       <!-- Menu (hidden by default on small screens) -->
       <nav class="hidden lg:flex space-x-4">
-        <a href="../index.php" class="text-white hover:text-gray-400">Home</a>
-        <a href="about.php" class="text-white hover:text-gray-400">About Us</a>
-        <a href="service.php" class="text-white hover:text-gray-400">Services</a>
-        <a href="pikyc.php" class="text-white hover:text-gray-400">Verify Our Pi KYC</a>
-        <a href="contact.php" class="text-white hover:text-gray-400">Contact</a>
+        <a href="index.php" class="text-white hover:text-gray-400">Home</a>
+        <a href="./pages/about.php" class="text-white hover:text-gray-400">About Us</a>
+        <a href="./pages/service.php" class="text-white hover:text-gray-400">Services</a>
+        <a href="./pages/pikyc.php" class="text-white hover:text-gray-400">Verify Our Pi KYC</a>
+        <a href="./pages/contact.php" class="text-white hover:text-gray-400">Contact</a>
         <a href="#" class="text-white hover:text-gray-400">Become a Vendor</a>
       </nav>
 
       <!-- Register and Login (hidden by default on small screens) -->
       <div class="hidden lg:flex space-x-4">
-        <a href="../pages/register.php" class="text-white hover:text-gray-400">Register</a>
+        <a href="./pages/register.php" class="text-white hover:text-gray-400">Register</a>
         <button class="text-white hover:text-gray-400 rounded-lg bg-[#ffce29] font-bold py-2 px-4 border-color: transparent;">
-        <a href="login.php" class="text-white hover:text-gray-400 no-underline">Login</a>
+        <a href="./pages/login.php" class="text-white hover:text-gray-400 no-underline">Login</a>
         </button>
       
       </div>
@@ -58,14 +58,14 @@
 
   <!-- Mobile Menu (visible on small screens) -->
   <div id="mobile-menu" class="lg:hidden hidden bg-gray-800 text-white p-4">
-    <a href="../index.php" class="block py-2">Home</a>
-    <a href="about.php" class="block py-2">About Us</a>
-    <a href="service.php" class="block py-2">Services</a>
-    <a href="pikyc.php" class="block py-2">Verify Our Pi KYC</a>
-    <a href="contact.php" class="block py-2">Contact</a>
+    <a href="index.php" class="block py-2">Home</a>
+    <a href="./pages/about.php" class="block py-2">About Us</a>
+    <a href="./pages/service.php" class="block py-2">Services</a>
+    <a href="./pages/pikyc.php" class="block py-2">Verify Our Pi KYC</a>
+    <a href="./pages/contact.php" class="block py-2">Contact</a>
     <a href="#" class="block py-2">Become a Vendor</a>
-    <a href="register.php" class="block py-2">Register</a>
-    <a href="login.php" class="block py-2">Login</a>
+    <a href="./pages/register.php" class="block py-2">Register</a>
+    <a href="./pages/login.php" class="block py-2">Login</a>
   </div>
 
   <!-- Your content goes here -->

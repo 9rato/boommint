@@ -95,23 +95,23 @@
  <form action="" method="post">
     <div class="mb-4">
         <label for="fullname" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-        <input type="text" id="fullname" name="fullname" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline">
+        <input type="text" id="fullname" name="fullname" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline" required>
     </div>
     <div class="mb-4">
         <label for="username" class="block text-gray-700 text-sm font-bold mb-2">UserName</label>
-        <input type="text" id="username" name="username" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline">
+        <input type="text" id="username" name="username" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline" required>
     </div>
     <div class="mb-4">
         <label for="telephoneno" class="block text-gray-700 text-sm font-bold mb-2">Telephone No.</label>
-        <input type="text" id="telephoneno" name="telephoneno" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline">
+        <input type="text" id="telephoneno" name="telephoneno" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline" required>
     </div>
     <div class="mb-4">
         <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-        <input type="text" id="email" name="email" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline">
+        <input type="text" id="email" name="email" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline" required>
     </div>
     <div class="mb-4">
         <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-        <input type="password" id="password" name="password" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline">
+        <input type="password" id="password" name="password" class="w-full border rounded px-3 py-2 leading-tight focus:outline-none focus:shadow-outline" required>
     </div>
 
     <button type="submit" name="register" class="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer">Register</button>
