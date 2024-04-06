@@ -6,7 +6,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./assets/image/icons/2.svg" type="image/x-icon">
   <title>Home</title>
 </head>
 <style>
@@ -42,7 +42,7 @@
         <a href="service.php" class="text-white hover:text-gray-400">Services</a>
         <a href="pikyc.php" class="text-white hover:text-gray-400">Verify Our Pi KYC</a>
         <a href="contact.php" class="text-white hover:text-gray-400">Contact</a>
-        <a href="#" class="text-white hover:text-gray-400">Become a Vendor</a>
+        <a href="comingsoon.php" class="text-white hover:text-gray-400">Become a Vendor</a>
       </nav>
 
       <!-- Register and Login (hidden by default on small screens) -->

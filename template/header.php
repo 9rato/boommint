@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/css/main.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Home</title>
+  <link rel="shortcut icon" href="./assets/image/icons/2.svg" type="image/x-icon">
 </head>
 <style>
     /* Additional custom styles */
@@ -42,7 +43,7 @@
         <a href="./pages/service.php" class="text-white hover:text-gray-400">Services</a>
         <a href="./pages/pikyc.php" class="text-white hover:text-gray-400">Verify Our Pi KYC</a>
         <a href="./pages/contact.php" class="text-white hover:text-gray-400">Contact</a>
-        <a href="#" class="text-white hover:text-gray-400">Become a Vendor</a>
+        <a href="./pages/comingsoon.php" class="text-white hover:text-gray-400">Become a Vendor</a>
       </nav>
 
       <!-- Register and Login (hidden by default on small screens) -->
